@@ -6,7 +6,7 @@ using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
 using Bogus;
 
-namespace Interview.Test;
+namespace Interview.Test.Advance;
 
 public class Booking
 {
@@ -39,9 +39,12 @@ public class OptimizeTest : XunitContextBase
         Output.WriteLine(logger.GetLog());
     }
     
+    /// <summary>
+    /// 打印月销售额
+    /// </summary>
+    /// <param name="bookings">假设 bookings 有 50w 的元素，如何优化?</param>
     public static void Action(List<Booking> bookings)
     {
-        // 假设 bookings 有 50w 的元素，如何优化?
         for (int i = 1; i <= 12; i++)
         {
             decimal totalPrice = bookings

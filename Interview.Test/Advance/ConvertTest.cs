@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Text.Json;
 
-namespace Interview.Test;
+namespace Interview.Test.Advance;
 
 public class Person
 {

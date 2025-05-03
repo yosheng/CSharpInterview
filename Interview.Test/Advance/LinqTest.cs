@@ -1,4 +1,4 @@
-﻿namespace Interview.Test;
+﻿namespace Interview.Test.Advance;
 
 public class LinqTest : XunitContextBase
 {

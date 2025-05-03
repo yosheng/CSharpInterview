@@ -1,4 +1,4 @@
-﻿namespace Interview.Test;
+﻿namespace Interview.Test.Thread;
 
 public class ThreadTaskTest : XunitContextBase
 {
@@ -14,7 +14,7 @@ public class ThreadTaskTest : XunitContextBase
 
     public void DoSomething(object i)
     {
-        Thread.Sleep(5000);
+        System.Threading.Thread.Sleep(5000);
     }
 
     public async Task DoSomethingAsync(object i)
@@ -26,7 +26,7 @@ public class ThreadTaskTest : XunitContextBase
     {
         List<int> numbers = Enumerable.Range(1, 10).ToList();
         Console.WriteLine($"初始化-{DateTime.Now}");
-        //假设打印的时间是2024-05-0100：00:00
+        //假设打印的时间是2024-05-01 00：00:00
         //执行方式1
         var tasks = numbers.Select(x => DoSomethingAsync(x));
         await Task.WhenAll(tasks.ToArray()).ConfigureAwait(false);
@@ -35,7 +35,7 @@ public class ThreadTaskTest : XunitContextBase
         Parallel.ForEach(numbers, x => DoSomething(x));
         Console.WriteLine($"执行方式2-时间大约是？{DateTime.Now}");
         //执行方式3
-        numbers.ForEach(x => new Thread(DoSomething).Start());
+        numbers.ForEach(x => new System.Threading.Thread(DoSomething).Start());
         Console.WriteLine($"执行方式3-时间大约是？{DateTime.Now}");
     }
 }

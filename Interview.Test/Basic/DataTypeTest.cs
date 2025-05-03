@@ -1,4 +1,4 @@
-﻿namespace Interview;
+﻿namespace Interview.Test.Basic;
 
 public class User
 {

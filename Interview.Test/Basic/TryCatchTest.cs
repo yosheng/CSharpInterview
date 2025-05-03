@@ -1,4 +1,4 @@
-﻿namespace Interview.Test;
+﻿namespace Interview.Test.Basic;
 
 public class TryCatchTest : XunitContextBase
 {

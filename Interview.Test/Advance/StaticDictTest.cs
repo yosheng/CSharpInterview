@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-namespace Interview.Test;
+namespace Interview.Test.Advance;
 
 public class Caching<T>
 {
